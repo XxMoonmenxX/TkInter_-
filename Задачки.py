@@ -105,7 +105,13 @@ def Galka(): # функция галочки
         ## докидаем сюда ещё функции для галки.
         tk = Tk() # определяем переменную дял окна
         tk.title('Окно 2') # Даем название
-        tk.geometry("360x480")# Даем размер
+        tk.geometry("480x480")# Даем размер
+
+        # создадим картиночку
+
+        JREG = PhotoImage(file='.venv/kkk.png') # Создадим переменную с функцией фото и укажем путь
+        img = ttk.Label(win, image=JREG) # пока что картинка создается в первом окне, так как со вторым ошибка(
+        img.place(x=0, y=0) # разместим это всё
         info = Label(tk,text='Окно два')# вывод текста во втором окне
         info.place(x=10, y= 10)# местоположение текста
         tk.mainloop()# луп окна
@@ -126,6 +132,9 @@ enabled_checkbutton.place(x=10, y=230)
 # enabled = StringVar(value=enabled_on)
 #
 # enabled_checkbutton = ttk.Checkbutton(textvariable=enabled, variable=enabled, offvalue=enabled_off, onvalue=enabled_on)
+
+
+
 
 win.update()  # обновляем информацию о виджетах
 
